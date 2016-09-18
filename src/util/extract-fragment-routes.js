@@ -1,6 +1,8 @@
+// @flow
+import type { Element } from 'react';
 import visitChildren from './visit-children';
 
-export default (children, forRoute) => {
+export default (children: Element<*>, forRoute: string) => {
   const routes = [forRoute];
 
   visitChildren(children, child => {
